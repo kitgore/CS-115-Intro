@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project source="2.13.8" version="1.0">
+This file is intended to be loaded by Logisim-evolution (https://github.com/reds-heig/logisim-evolution).
+<lib desc="#Wiring" name="0">
+    <tool name="Constant">
+      <a name="facing" val="south"/>
+      <a name="value" val="0x0"/>
+    </tool>
+  </lib>
+  <lib desc="#Gates" name="1"/>
+  <lib desc="#Base" name="2">
+    <tool name="Text Tool">
+      <a name="text" val=""/>
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="halign" val="center"/>
+      <a name="valign" val="base"/>
+    </tool>
+  </lib>
+  <main name="ParityGenerator"/>
+  <options>
+    <a name="gateUndefined" val="ignore"/>
+    <a name="simlimit" val="1000"/>
+    <a name="simrand" val="0"/>
+    <a name="tickmain" val="half_period"/>
+  </options>
+  <mappings>
+    <tool lib="2" map="Button2" name="Menu Tool"/>
+    <tool lib="2" map="Button3" name="Menu Tool"/>
+    <tool lib="2" map="Ctrl Button1" name="Menu Tool"/>
+  </mappings>
+  <toolbar>
+    <tool lib="2" name="Poke Tool"/>
+    <tool lib="2" name="Edit Tool"/>
+    <tool lib="2" name="Text Tool">
+      <a name="text" val=""/>
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="halign" val="center"/>
+      <a name="valign" val="base"/>
+    </tool>
+    <sep/>
+    <tool lib="0" name="Pin">
+      <a name="facing" val="south"/>
+    </tool>
+    <tool lib="0" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+    </tool>
+    <tool lib="1" name="NOT Gate"/>
+    <tool lib="1" name="AND Gate">
+      <a name="facing" val="south"/>
+      <a name="inputs" val="5"/>
+    </tool>
+    <tool lib="1" name="OR Gate">
+      <a name="facing" val="south"/>
+      <a name="inputs" val="5"/>
+    </tool>
+  </toolbar>
+  <circuit name="XOR">
+    <a name="circuit" val="XOR"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif plain 12"/>
+    <a name="circuitvhdl" val="false"/>
+    <a name="circuitvhdlpath" val=""/>
+    <appear>
+      <path d="M71,51 Q75,61 79,51" fill="none" stroke="#808080" stroke-width="2"/>
+      <rect fill="none" height="30" stroke="#000000" stroke-width="2" width="50" x="50" y="50"/>
+      <circ-port height="8" pin="160,300" width="8" x="96" y="46"/>
+      <circ-port height="8" pin="290,300" width="8" x="106" y="46"/>
+      <circ-port height="10" pin="210,640" width="10" x="95" y="75"/>
+      <circ-anchor facing="east" height="6" width="6" x="97" y="57"/>
+    </appear>
+    <wire from="(180,340)" to="(180,410)"/>
+    <wire from="(160,370)" to="(160,410)"/>
+    <wire from="(290,300)" to="(290,340)"/>
+    <wire from="(290,340)" to="(290,350)"/>
+    <wire from="(290,380)" to="(290,390)"/>
+    <wire from="(180,340)" to="(290,340)"/>
+    <wire from="(280,390)" to="(280,410)"/>
+    <wire from="(170,460)" to="(170,510)"/>
+    <wire from="(280,390)" to="(290,390)"/>
+    <wire from="(210,640)" to="(220,640)"/>
+    <wire from="(160,300)" to="(160,320)"/>
+    <wire from="(160,320)" to="(160,340)"/>
+    <wire from="(270,460)" to="(270,510)"/>
+    <wire from="(210,510)" to="(210,530)"/>
+    <wire from="(230,510)" to="(230,530)"/>
+    <wire from="(170,510)" to="(210,510)"/>
+    <wire from="(230,510)" to="(270,510)"/>
+    <wire from="(260,320)" to="(260,410)"/>
+    <wire from="(160,320)" to="(260,320)"/>
+    <wire from="(220,580)" to="(220,640)"/>
+    <comp lib="1" loc="(220,580)" name="OR Gate">
+      <a name="facing" val="south"/>
+      <a name="inputs" val="5"/>
+    </comp>
+    <comp lib="0" loc="(160,300)" name="Pin">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="2" loc="(266,300)" name="Text">
+      <a name="text" val="y"/>
+    </comp>
+    <comp lib="1" loc="(170,460)" name="AND Gate">
+      <a name="facing" val="south"/>
+      <a name="inputs" val="5"/>
+    </comp>
+    <comp lib="0" loc="(210,640)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(290,300)" name="Pin">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="1" loc="(290,380)" name="NOT Gate">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="1" loc="(270,460)" name="AND Gate">
+      <a name="facing" val="south"/>
+      <a name="inputs" val="5"/>
+    </comp>
+    <comp lib="1" loc="(160,370)" name="NOT Gate">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="2" loc="(314,250)" name="Text">
+      <a name="text" val="Use minterm expansion to create an XOR gate using AND + OR gates"/>
+    </comp>
+    <comp lib="2" loc="(134,297)" name="Text">
+      <a name="text" val="x"/>
+    </comp>
+  </circuit>
+  <circuit name="ParityGenerator">
+    <a name="circuit" val="ParityGenerator"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif plain 12"/>
+    <a name="circuitvhdl" val="false"/>
+    <a name="circuitvhdlpath" val=""/>
+    <wire from="(230,520)" to="(230,590)"/>
+    <wire from="(70,240)" to="(70,310)"/>
+    <wire from="(180,240)" to="(180,250)"/>
+    <wire from="(180,280)" to="(180,290)"/>
+    <wire from="(210,80)" to="(210,410)"/>
+    <wire from="(340,520)" to="(340,530)"/>
+    <wire from="(340,560)" to="(340,570)"/>
+    <wire from="(230,520)" to="(340,520)"/>
+    <wire from="(330,570)" to="(330,590)"/>
+    <wire from="(70,240)" to="(180,240)"/>
+    <wire from="(170,290)" to="(170,310)"/>
+    <wire from="(150,220)" to="(150,310)"/>
+    <wire from="(60,410)" to="(100,410)"/>
+    <wire from="(120,410)" to="(160,410)"/>
+    <wire from="(220,690)" to="(260,690)"/>
+    <wire from="(280,690)" to="(320,690)"/>
+    <wire from="(310,500)" to="(310,590)"/>
+    <wire from="(270,800)" to="(430,800)"/>
+    <wire from="(50,270)" to="(50,310)"/>
+    <wire from="(210,550)" to="(210,590)"/>
+    <wire from="(340,410)" to="(340,520)"/>
+    <wire from="(160,360)" to="(160,410)"/>
+    <wire from="(220,640)" to="(220,690)"/>
+    <wire from="(60,360)" to="(60,410)"/>
+    <wire from="(330,570)" to="(340,570)"/>
+    <wire from="(170,290)" to="(180,290)"/>
+    <wire from="(320,640)" to="(320,690)"/>
+    <wire from="(210,410)" to="(340,410)"/>
+    <wire from="(260,690)" to="(260,710)"/>
+    <wire from="(280,690)" to="(280,710)"/>
+    <wire from="(180,160)" to="(180,240)"/>
+    <wire from="(140,80)" to="(140,160)"/>
+    <wire from="(50,220)" to="(50,240)"/>
+    <wire from="(100,410)" to="(100,430)"/>
+    <wire from="(120,410)" to="(120,430)"/>
+    <wire from="(210,480)" to="(210,500)"/>
+    <wire from="(210,500)" to="(210,520)"/>
+    <wire from="(140,160)" to="(180,160)"/>
+    <wire from="(50,220)" to="(150,220)"/>
+    <wire from="(110,480)" to="(210,480)"/>
+    <wire from="(70,80)" to="(70,110)"/>
+    <wire from="(210,500)" to="(310,500)"/>
+    <wire from="(50,110)" to="(70,110)"/>
+    <wire from="(270,760)" to="(270,800)"/>
+    <wire from="(50,110)" to="(50,220)"/>
+    <wire from="(430,240)" to="(430,800)"/>
+    <comp lib="1" loc="(320,640)" name="AND Gate">
+      <a name="facing" val="south"/>
+      <a name="inputs" val="5"/>
+    </comp>
+    <comp lib="1" loc="(270,760)" name="OR Gate">
+      <a name="facing" val="south"/>
+      <a name="inputs" val="5"/>
+    </comp>
+    <comp lib="1" loc="(220,640)" name="AND Gate">
+      <a name="facing" val="south"/>
+      <a name="inputs" val="5"/>
+    </comp>
+    <comp lib="2" loc="(576,238)" name="Text">
+      <a name="text" val="Benjamin Griepp"/>
+    </comp>
+    <comp lib="0" loc="(430,240)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="Parity"/>
+    </comp>
+    <comp lib="1" loc="(160,360)" name="AND Gate">
+      <a name="facing" val="south"/>
+      <a name="inputs" val="5"/>
+    </comp>
+    <comp lib="2" loc="(554,78)" name="Text">
+      <a name="text" val="ONLY use: NOT, AND, OR, and any custom functions you write (included in the .circ submission)"/>
+    </comp>
+    <comp lib="2" loc="(434,183)" name="Text">
+      <a name="text" val="Output Bit"/>
+    </comp>
+    <comp lib="2" loc="(566,115)" name="Text">
+      <a name="text" val="WRITE YOUR NAME AND PLEDGE SOMEWHERE IN THIS CIRCUIT"/>
+    </comp>
+    <comp lib="2" loc="(497,68)" name="Text"/>
+    <comp lib="1" loc="(110,480)" name="OR Gate">
+      <a name="facing" val="south"/>
+      <a name="inputs" val="5"/>
+    </comp>
+    <comp lib="0" loc="(70,80)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="label" val="X"/>
+    </comp>
+    <comp lib="2" loc="(523,27)" name="Text">
+      <a name="text" val="Write your parity circuit here"/>
+    </comp>
+    <comp lib="2" loc="(141,27)" name="Text">
+      <a name="text" val="Input Bits"/>
+    </comp>
+    <comp lib="1" loc="(60,360)" name="AND Gate">
+      <a name="facing" val="south"/>
+      <a name="inputs" val="5"/>
+    </comp>
+    <comp lib="1" loc="(340,560)" name="NOT Gate">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="1" loc="(50,270)" name="NOT Gate">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="1" loc="(180,280)" name="NOT Gate">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="0" loc="(140,80)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="label" val="Y"/>
+    </comp>
+    <comp lib="2" loc="(709,272)" name="Text">
+      <a name="text" val="I pledge my honor that I have abided by the Stevens Honor System."/>
+    </comp>
+    <comp lib="2" loc="(540,57)" name="Text">
+      <a name="text" val="the output = 1 if an odd number of inputs (1 or 3) are 1, otherwise 0"/>
+    </comp>
+    <comp lib="0" loc="(210,80)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="label" val="Z"/>
+    </comp>
+    <comp lib="1" loc="(210,550)" name="NOT Gate">
+      <a name="facing" val="south"/>
+    </comp>
+  </circuit>
+</project>
